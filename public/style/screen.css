@@ -29,18 +29,7 @@ html, body {
 #slider{
     width: 100%;
 }
-.content-padded{
-    margin-top: 50px;
-    max-width: 300px;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: inline-block;
-    height: 400px;
-    background: black;
-    padding: 0 20px 0 20px;
-}
+
 
 label{
     padding-right: 20px;

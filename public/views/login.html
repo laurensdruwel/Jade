@@ -13,19 +13,20 @@
 
 
 
-<div class="ui raised very padded text container segment">
-    <h2 class="ui header">Welcome to Jade!</h2>
-    <form>
-        <fieldset>
-            <legend>Login</legend>
-            <label for="username">Username</label>
-            <input type="text" id="username">
-            <label for="password">Password</label>
-            <input type="password" id="password">
-            <button id="loginbtn" class="btn btn-positive">Login</button><button id="registerbtn" class="btn btn-negative">Register</button>
-        </fieldset>
+<div class="ui raised very padded text container  segment">
+    <form class="ui form">
+        <h2>Welcome to Jade!</h2>
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="field">
+            <label>Passphrase</label>
+            <input type="password" name="passphrase" placeholder="Passphrase">
+        </div>
 
-
+        <button class="ui button" type="submit">Login</button>
+        <a href="register.html" class="ui button">Register</a>
     </form>
 </div>
 

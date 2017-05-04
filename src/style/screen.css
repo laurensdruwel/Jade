@@ -9,6 +9,7 @@ nav #blue{
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
+    color: white;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -47,6 +48,9 @@ label{
     margin-bottom: 15%;
 }
 
+loginbtn{
+    margin-right: 5px;
+}
 
 
 

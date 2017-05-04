@@ -69,3 +69,10 @@ $('body').on('focusin', 'input, textarea', function(event) {
         window.scrollTo(0, scroll);
     }
 });
+
+
+window.addEventListener('native.keyboardshow', function(e){
+    setTimeout(function() {
+        document.activeElement.scrollIntoViewIfNeeded();
+    }, 100);
+});

@@ -39,6 +39,9 @@ html, body {
     justify-content: center;
     flex-direction: column;
     height: 400px;
+    background: black;
+    padding: 0 20px 0 20px;
+    horizontal-align: middle;
 }
 
 label{
@@ -56,7 +59,12 @@ label{
 loginbtn{
     margin-right: 5px;
 }
-
+input[type="search"],
+input[type="text"],
+input[type="time"],
+input[type="range"]{
+    color: black;
+}
 
 
 

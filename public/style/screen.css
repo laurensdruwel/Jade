@@ -9,7 +9,7 @@ nav #blue{
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
-    color: white;
+    //color: white;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -32,16 +32,14 @@ html, body {
 .content-padded{
     margin-top: 50px;
     max-width: 300px;
+    margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     display: inline-block;
-    justify-content: center;
-    flex-direction: column;
     height: 400px;
     background: black;
     padding: 0 20px 0 20px;
-    horizontal-align: middle;
 }
 
 label{

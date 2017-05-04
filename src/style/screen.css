@@ -20,7 +20,12 @@ html, body {
     transform-style: preserve-3d;
 
 }
+#map{
+    width: 100%;
+    height: 20%;
+    max-height: 150px;
 
+}
 #slider{
     width: 100%;
 }

@@ -62,7 +62,8 @@ loginbtn{
 input[type="search"],
 input[type="text"],
 input[type="time"],
-input[type="range"]{
+input[type="range"],
+input[type="password"]{
     color: black;
 }
 
@@ -76,4 +77,3 @@ input[type="range"]{
 
     }
 }
-

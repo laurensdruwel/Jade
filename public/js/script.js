@@ -63,4 +63,9 @@ var initMap = function() {
 
 };
 
-
+$('body').on('focusin', 'input, textarea', function(event) {
+    if(navigator.userAgent.indexOf('Android') > -1){
+        var scroll = $(this).offset();
+        window.scrollTo(0, scroll);
+    }
+});

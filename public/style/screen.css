@@ -13,7 +13,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("../../assets/bg.jpg");
+    background-image: url("../assets/bg.jpg");
     background-size: cover;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -68,5 +68,12 @@ input[type="range"]{
 
 
 
+@media screen and (max-height: 300px) {
 
+    #myinputtext{
+        position: absolute;
+        top: 50px;
+
+    }
+}
 

@@ -30,13 +30,39 @@ app.get('/', function (req, response) {
     response.render("login.html", "");
 });
 
-app.get('/locations', function (req, response) {
+app.get('/register', function (req, response) {
 
-    response.render('locations.html', {
+    response.render('register.html', {
 
     });
 
 });
+
+app.get('/places', function (req, response) {
+
+    response.render('places.html', {
+
+    });
+
+});
+
+
+app.post('/checkLogin', function (req, response) {
+
+    console.log(req.body);
+    var loginOk = checkLogin(req.body.username,req.body.passphrase);
+    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    if(loginOk){
+        response.render('places.html');
+    }
+    else response.render('login.html');
+
+    // response.render('places.html', {
+    //
+    // });
+});
+
+
 
 app.post('/load_locations', function (req, res) {
     console.log(req.body);
@@ -54,12 +80,13 @@ app.post('/load_locations', function (req, res) {
 
 //sql functions
 
-checkLogin = (username, password) => {
+checkLogin = (username, passphrase) => {
 
     var statement = 'Select * from users where username=?';
     connection.query(statement, [username], function (error, results, fields) {
         if (error) throw error;
-        console.log(results[0].password == password);
+;
+        results[0].passphrase === passphrase;
     });
 
     connection.end();

@@ -50,12 +50,21 @@ app.get('/places', function (req, response) {
 app.post('/checkLogin', function (req, response) {
 
     console.log(req.body);
-    var loginOk = checkLogin(req.body.username,req.body.passphrase);
+    var loginOk = getUsers(req.body.username,req.body.passphrase);
     console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-    if(loginOk){
-        response.render('places.html');
-    }
-    else response.render('login.html');
+
+
+
+
+
+
+
+    // if(loginOk){
+    //     console.warn("correct");
+    //     // response.render('places.html');
+    // }
+    // else console.warn("incorrect login!");
+    // else response.render('login.html');
 
     // response.render('places.html', {
     //
@@ -79,19 +88,39 @@ app.post('/load_locations', function (req, res) {
 
 
 //sql functions
+function checkLogin(username, passphrase) {
 
-checkLogin = (username, passphrase) => {
 
-    var statement = 'Select * from users where username=?';
-    connection.query(statement, [username], function (error, results, fields) {
-        if (error) throw error;
-;
-        results[0].passphrase === passphrase;
+        var statement = 'Select * from users where username=?';
+        connection.query(statement, [username], function (error, results, fields) {
+            if (error) throw error;
+
+            results[0].passphrase === passphrase;
+        });
+
+        connection.end();
+
+
+}
+
+
+function getUsers(){
+    var statement = 'Select * from users';
+    connection.query(statement, function(error, results, fiels){
+        if(error) throw error;
+        console.log(results);
+        console.log("username= "+results[0].passphrase);
+        if(results[0].passphrase == "root"){
+            console.log("im in ");
+        }
+        else{
+            console.log("no im not");
+        }
+
     });
 
     connection.end();
-};
-
+}
 // getLocations = (start, end) => {
 //     return new Promise(function (resolve) {
 //         var statement = 'Select * from locations limit ?,?';

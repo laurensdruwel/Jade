@@ -38,20 +38,20 @@ app.get('/register', function (req, response) {
 
 });
 
-app.get('/places', function (req, response) {
-
-    response.render('places.html', {
-
-    });
-
-});
+// app.get('/places', function (req, response) {
+//     response.render('places.html', {
+//     });
+// });
 
 
 app.post('/checkLogin', function (req, response) {
 
     console.log(req.body);
     var loginOk = getUsers(req.body.username,req.body.passphrase);
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    console.log("login: "+loginOk);
+
+
 
 
 
@@ -71,18 +71,18 @@ app.post('/checkLogin', function (req, response) {
     // });
 });
 
-
-
-app.post('/load_locations', function (req, res) {
-    console.log(req.body);
-    var locations = getLocations(req.body.start,req.body.end);
-    
-    locations.then(function (results) {
-        res.json ({
-            locations: results
-        });
-    });
-});
+//
+//
+// app.post('/load_locations', function (req, res) {
+//     console.log(req.body);
+//     var locations = getLocations(req.body.start,req.body.end);
+//
+//     locations.then(function (results) {
+//         res.json ({
+//             locations: results
+//         });
+//     });
+// });
 
 
 
@@ -106,20 +106,26 @@ function checkLogin(username, passphrase) {
 
 function getUsers(){
     var statement = 'Select * from users';
-    connection.query(statement, function(error, results, fiels){
+    var checkLogin = null;
+    connection.query(statement, function(error, results, fields){
+        checkLogin = "XXX";
         if(error) throw error;
         console.log(results);
         console.log("username= "+results[0].passphrase);
         if(results[0].passphrase == "root"){
             console.log("im in ");
+            checkLogin = true;
         }
         else{
             console.log("no im not");
+            checkLogin = false;
         }
 
     });
 
-    connection.end();
+
+
+    return checkLogin;
 }
 // getLocations = (start, end) => {
 //     return new Promise(function (resolve) {

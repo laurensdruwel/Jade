@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
         $passphrase= trim($_POST['passphrase']);
 
     }
-
+//xx
     if(empty($_POST['passphraseTwo'])){
 
         // Adds name to array

@@ -28,7 +28,7 @@
                 <label>Passphrase</label>
                 <input type="password" name="passphraseTwo" placeholder="Passphrase">
             </div>
-
+        <a href="login.php" class="ui button" >Back</a>
         <input type="submit" class="ui button" name="submit" value="Submit">
 
     </form>

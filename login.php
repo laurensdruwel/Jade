@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../Semantic-UI-CSS-master/semantic.min.css">
-    <link type="text/css" rel="stylesheet" href="../style/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <link type="text/css" rel="stylesheet" href="style/screen.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -25,8 +25,8 @@
             <input type="password" name="passphrase" placeholder="Passphrase">
         </div>
 
-        <button class="ui button" type="submit">Login</button>
-        <!--<a href="register" class="ui button" >Register</a>-->
+        <button class="ui button" type="submit" >Login</button>
+        <a href="register.php" class="ui button" >Register</a>
     </form>
 </div>
 
@@ -41,7 +41,7 @@
 
 
 
-<script src="../Semantic-UI-CSS-master/semantic.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script src="Semantic-UI-CSS-master/semantic.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

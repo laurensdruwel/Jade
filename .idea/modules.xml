@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Jade.iml" filepath="$PROJECT_DIR$/.idea/Jade.iml" />
+      <module fileurl="file://C:/xampp/htdocs/Jade/.idea/Jade.iml" filepath="C:/xampp/htdocs/Jade/.idea/Jade.iml" />
     </modules>
   </component>
 </project>

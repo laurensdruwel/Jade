@@ -1,0 +1,70 @@
+nav #blue{
+    margin-top: 100px;
+    text-align: center;  }
+
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    //color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+}
+#map{
+    width: 100%;
+    /*height: 20%;*/
+    max-height: 20%;
+
+}
+#slider{
+    width: 100%;
+}
+
+
+label{
+    padding-right: 20px;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="time"],
+input[type="range"],
+label{
+    margin-bottom: 15%;
+}
+
+loginbtn{
+    margin-right: 5px;
+}
+input[type="search"],
+input[type="text"],
+input[type="time"],
+input[type="range"],
+input[type="password"]{
+    color: black;
+}
+
+
+
+@media screen and (max-height: 300px) {
+
+    #myinputtext{
+        position: absolute;
+        top: 50px;
+
+    }
+}
+
+.fuck{
+    height: 200px;
+}

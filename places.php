@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../Semantic-UI-CSS-master/semantic.min.css">
-    <link type="text/css" rel="stylesheet" href="../style/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <link type="text/css" rel="stylesheet" href="style/screen.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -29,15 +29,20 @@
 
 
 
-<script type="text/javascript" src="../js/jquery-3.2.1.min.js"
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"
         crossorigin="anonymous"></script>
 
+<?php
+require_once ("mysqli_connect.php");
+CheckSession("places.php");
+
+?>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMUpTXB_FdTbd54dmeCp3c3oi5Oakd6ak
          &libraries=places&callback=initMap">
 </script>
 
-<script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
+<script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

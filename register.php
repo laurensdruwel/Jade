@@ -5,6 +5,9 @@
     <title>Registration</title>
     <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
     <link type="text/css" rel="stylesheet" href="style/screen.css"/>
+    <link rel="icon"
+          type="image/png"
+          href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
